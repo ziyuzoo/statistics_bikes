@@ -1,0 +1,22 @@
+---
+title: "318Final_explore"
+author: "Ziyu Wang"
+date: "March 18, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+# read in data from raw data file
+data_day = read.csv("/Users/ziyu_zoo/Documents/sch/statistics_bikes/Raw Data/day.csv", header = TRUE)
+data_hour = read.csv("/Users/ziyu_zoo/Documents/sch/statistics_bikes/Raw Data/hour.csv", header = TRUE)
+
+# write and store as r data frame
+save(data_day,file="data_day.Rda")
+save(data_hour,file="data_hour.Rda")
+
+# note that to read data, call load("data.Rda")
+```
