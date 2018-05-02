@@ -61,3 +61,9 @@ result.adjr2$which[67,] # no predictor variables removed
 boxcox(mallow.fit) # choose lambda = 0.75
 model3 = lm(cnt^0.75 ~ mnth + temp + weekday + workingday + 
               weathersit + holiday + hum + windspeed, data = data.frame(bike.revised))
+scatter.smooth(resid(model3) ~ predict(model3))
+
+# box cox made it worse so consider 2nd order terms --> Interaction Model
+
+
+
